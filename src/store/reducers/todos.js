@@ -1,3 +1,13 @@
 export default function todos(state = [], action) {
-  return state
+  const { type, payload } = action
+  switch (type) {
+    case 'GET_LIST':
+      return payload
+
+    case 'ADD_TODO':
+      return [...state, payload]
+
+    default:
+      return state
+  }
 }

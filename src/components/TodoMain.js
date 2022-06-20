@@ -1,17 +1,16 @@
+import { useSelector } from 'react-redux'
+import TodoItem from './TodoItem'
 const TodoList = () => {
+  const list = useSelector((state) => state.todos)
+  console.log()
   return (
     <section className="main">
       <input id="toggle-all" className="toggle-all" type="checkbox" />
       <label htmlFor="toggle-all">Mark all as complete</label>
       <ul className="todo-list">
-        <li className="completed">
-          <div className="view">
-            <input className="toggle" type="checkbox" />
-            <label>吃饭</label>
-            <button className="destroy" />
-          </div>
-          <input className="edit" defaultValue="Create a TodoMVC template" />
-        </li>
+        {list.map((item) => (
+          <TodoItem item={item} key={item.id}></TodoItem>
+        ))}
       </ul>
     </section>
   )
