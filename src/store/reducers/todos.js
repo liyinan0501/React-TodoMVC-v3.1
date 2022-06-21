@@ -7,6 +7,9 @@ export default function todos(state = [], action) {
     case 'ADD_TODO':
       return [...state, payload]
 
+    case 'DEL_TODO':
+      return state.filter((item) => item.id !== payload)
+
     default:
       return state
   }

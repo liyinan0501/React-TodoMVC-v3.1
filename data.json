@@ -21,29 +21,9 @@
       "id": 4
     },
     {
-      "name": "Hard",
-      "done": false,
-      "id": 5
-    },
-    {
-      "name": "So",
-      "done": false,
-      "id": 6
-    },
-    {
-      "name": "soso",
-      "done": false,
-      "id": 7
-    },
-    {
       "name": "Tysk",
       "done": false,
       "id": 8
-    },
-    {
-      "name": "Night",
-      "done": false,
-      "id": 9
     }
   ]
 }
