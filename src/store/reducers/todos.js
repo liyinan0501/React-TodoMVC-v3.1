@@ -10,6 +10,25 @@ export default function todos(state = [], action) {
     case 'DEL_TODO':
       return state.filter((item) => item.id !== payload)
 
+    case 'CHANGE_DONE':
+      return state.map((item) => {
+        // immer
+        if (item.id === payload.id) {
+          return { ...item, done: payload.done }
+        } else {
+          return item
+        }
+      })
+
+    case 'CHANGE_NAME':
+      return state.map((item) => {
+        if (item.id === payload.id) {
+          return { ...item, name: payload.name }
+        } else {
+          return item
+        }
+      })
+
     default:
       return state
   }

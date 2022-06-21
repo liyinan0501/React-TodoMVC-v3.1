@@ -3,25 +3,25 @@
     {
       "id": 1,
       "name": "Learn React",
-      "done": true
+      "done": false
     },
     {
       "id": 2,
       "name": "Learn Hook",
-      "done": true
+      "done": false
     },
     {
       "id": 3,
       "name": "Learn Redux",
-      "done": false
+      "done": true
     },
     {
       "name": "Learn Node.js",
-      "done": false,
+      "done": true,
       "id": 4
     },
     {
-      "name": "Tysk",
+      "name": "Tysk112df",
       "done": false,
       "id": 8
     }

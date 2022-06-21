@@ -35,3 +35,27 @@ export const delTodo = (id) => {
     })
   }
 }
+
+export const changeDone = (id, done) => {
+  return async (dispatch) => {
+    // succeed status 200
+    await axios.patch(`http://localhost:8888/todos/${id}`, {
+      done,
+    })
+    dispatch({
+      type: 'CHANGE_DONE',
+      payload: { id, done },
+    })
+  }
+}
+
+export const changeName = (id, name) => {
+  return async (dispatch) => {
+    // succeed status 200
+    await axios.patch(`http://localhost:8888/todos/${id}`, { name })
+    dispatch({
+      type: 'CHANGE_NAME',
+      payload: { id, name },
+    })
+  }
+}
