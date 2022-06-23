@@ -13,7 +13,7 @@
     {
       "id": 3,
       "name": "Learn Redux",
-      "done": true
+      "done": false
     },
     {
       "name": "Learn Node.js",
