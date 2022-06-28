@@ -8,10 +8,13 @@ const TodoFooter = () => {
   const filter = (item) => {
     dispatch(changeFilter(item))
   }
+  const leftTodo = useSelector((item) => item.todos).filter(
+    (item) => !item.done
+  ).length
   return (
     <footer className="footer">
       <span className="todo-count">
-        <strong>0</strong> item left
+        <strong>{leftTodo}</strong> item left
       </span>
       <ul className="filters">
         {arr.map((item) => (
